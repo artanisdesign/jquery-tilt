@@ -38,13 +38,15 @@
 				var tiltAngleY = -normalisedDistanceY * angle;
 
 				$(base.el).css({"-webkit-transform": " perspective("+perspective+") rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "-webkit-transform-origin": "50% 50%", "-webkit-transition": "none"});
-			    $(base.el).css({"-moz-transform": " perspective("+perspective+"px) rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "-moz-transform-style": "preserve-3d", "-moz-transform-origin": "50% 50%", "-moz-transition": "none"});
-			    $(base.el).css({"transform": " perspective("+perspective+") rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "transform-origin": "50% 50%", "transition": "none"});
+			    	$(base.el).css({"-moz-transform": " perspective("+perspective+"px) rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "-moz-transform-style": "preserve-3d", "-moz-transform-origin": "50% 50%", "-moz-transition": "none"});
+			    	$(base.el).css({"-ms-transform": " perspective("+perspective+"px) rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "-ms-transform-style": "preserve-3d", "-ms-transform-origin": "50% 50%", "-ms-transition": "none"});
+			    	$(base.el).css({"transform": " perspective("+perspective+") rotateY("+tiltAngleX+"deg) rotateX("+tiltAngleY+"deg)", "transform-origin": "50% 50%", "transition": "none"});
 			});
 			
 			$(base.el).parent(".tilt-parent").mouseout(function(e) { 
 				$(base.el).css({"-webkit-transform": " perspective("+perspective+") rotateY(0deg) rotateX(0deg)", "-webkit-transform-origin": "50% 50%", "-webkit-transition": "all linear 0.5s"});
 				$(base.el).css({"-moz-transform": " perspective("+perspective+"px) rotateY(0deg) rotateX(0deg)", "-moz-transform-origin": "50% 50%", "-moz-transition": "all linear 0.5s"});
+				$(base.el).css({"-ms-transform": " perspective("+perspective+"px) rotateY(0deg) rotateX(0deg)", "-ms-transform-origin": "50% 50%", "-ms-transition": "all linear 0.5s"});
 				$(base.el).css({"transform": " perspective("+perspective+") rotateY(0deg) rotateX(0deg)", "transform-origin": "50% 50%", "transition": "all linear 0.5s"});
 			});
 			
